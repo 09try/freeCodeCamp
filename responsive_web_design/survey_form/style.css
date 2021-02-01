@@ -1,0 +1,18 @@
+body {
+    background-color: gainsboro;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#main {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+#survey-form {
+    background-color: white;
+}
+
+.field {
+    padding-bottom: 10px;
+}
