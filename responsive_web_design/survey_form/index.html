@@ -4,6 +4,7 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -17,27 +18,27 @@
         </p>
 
         <form action="" id="survey-form">
-            <div class="field">
+            <div class="form-group row">
                 <label id="name-label" for="name">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Name">
+                <input class="form-control" type="text" id="name" name="name" required placeholder="Name">
             </div>
-            <div class="field">
+            <div class="form-group row">
                 <label id="email-label" for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="Email">
+                <input class="form-control" type="email" id="email" name="email" required placeholder="Email">
             </div>
-            <div class="field">
+            <div class="form-group row">
                 <label id="number-label" for="age">Age</label>
-                <input id="number" type="number" id="age" name="age" pattern="[0-9]" min="18" max="99" placeholder="Age">
+                <input class="form-control" id="number" type="number" id="age" name="age" pattern="[0-9]" min="18" max="99" placeholder="Age">
             </div>
-            <div class="field">
+            <div class="form-group row">
                 <label for="dropdown">Dropdown</label>
-                <select name="dropdown" id="dropdown">
+                <select class="form-control" name="dropdown" id="dropdown">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                 </select>
             </div>
-            <div class="field">
+            <div class="form-group">
                 <label for="">Lorem ipsum dolor sit amet.</label>
                 <br>
                 <label for="radio1">Radio1</label>
@@ -49,22 +50,22 @@
                 <label for="radio3">Radio3</label>
                 <input type="radio" id="radio3" name="my-radio" value="radio3">
             </div>
-            <div id="field">
+            <div class="form-group form-check">
                 <label for="">Lorem ipsum dolor sit amet.</label>
                 <br>
                 <input type="checkbox" id="0" name="0" value="0">
-                <label for="0">0</label>
+                <label for="0">First Option</label>
                 <input type="checkbox" id="1" name="1" value="1">
-                <label for="1">1</label>
+                <label for="1">Second Option</label>
                 <input type="checkbox" id="2" name="2" value="2">
-                <label for="2">2</label>
+                <label for="2">Third Option</label>
             </div>
-            <div class="field">
+            <div class="form-group">
                 <p>Lorem ipsum dolor sit amet.</p>
-                <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                <textarea class="form-control" name="textarea" id="textarea" cols="30" rows="10"></textarea>
             </div>
-            <div>
-                <button id="submit">Submit</button>
+            <div class="my-submit">
+                <button class="btn btn-primary" id="submit">Submit</button>
             </div>
         </form>
     </div>
