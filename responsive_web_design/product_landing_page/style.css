@@ -49,17 +49,31 @@ nav>ul {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .desc {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    height: 125px;
+    width: 80vw;
+    padding: 5px;
 }
 
 #product-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 input[type="email"] {
@@ -88,11 +102,25 @@ input[type="submit"]:hover {
 
 .content {
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon {
-    display: inline;
-    margin: 15px;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: darkorange;
+    width: 20vw;
+    height: 125px;
+}
+
+#page-wrapper {
+    position: relative;
+}
+
+.grid {
+    display: flex;
 }
