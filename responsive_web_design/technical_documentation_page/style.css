@@ -1,0 +1,28 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-section {
+    margin: 10px 10px;
+    border: solid 1px black;
+    overflow: hidden;
+}
+
+header {
+    text-align: left;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+code {
+    background-color: #eee;
+    padding: 15px 15px 15px 15px;
+    border-radius: 5%;
+    margin: 10px 10px 10px 10px;
+    width: 100%;
+}
