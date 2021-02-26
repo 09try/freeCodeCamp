@@ -1,0 +1,23 @@
+function mutation(arr) {
+
+    var count = 0;
+
+    var string0 = arr[0].toLowerCase().split("");
+    var string1 = arr[1].toLowerCase().split("");
+
+    for (let i = 0; i < string1.length; i++) {
+        let ch = string1[i];
+        if (string0.indexOf(ch) != -1) {
+            count += 1;
+        }
+
+    }
+
+    if (count >= arr[1].length) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+mutation(["hello", "hey"]);

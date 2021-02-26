@@ -1,0 +1,14 @@
+function bouncer(arr) {
+
+  let output = [];
+
+  for(let i = 0; i < arr.length; i++){
+    if(new Boolean(arr[i]) == true) {
+      output.push(arr[i]);
+    }
+  }
+
+  return output;
+}
+
+bouncer([7, "ate", "", false, 9]);
