@@ -1,0 +1,26 @@
+function destroyer(arr) {
+
+    let elementsToRemove = [];
+    let newArr = [];
+
+    for (let i = 1; i < arguments.length; i++) {
+        elementsToRemove.push(arguments[i]);
+    }
+
+    for (let j = 0; j < arguments[0].length; j++) {
+
+        let match = false;
+
+        for (let k = 0; k < elementsToRemove.length; k++) {
+            if (arguments[0][j] == elementsToRemove[k]) {
+                match = true;
+            }
+        }
+
+        if (match == false) {
+            newArr.push(arguments[0][j]);
+        }
+    }
+
+    return newArr;
+}

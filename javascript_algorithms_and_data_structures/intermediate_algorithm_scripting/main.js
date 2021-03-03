@@ -29,25 +29,51 @@
 // console.log(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]));
 
 
-function destroyer(arr) {
+// function destroyer(arr) {
 
-    let elementsToRemove = [];
-    let newArr = [];
+//     let elementsToRemove = [];
+//     let newArr = [];
 
-    for (let i = 1; i < arguments.length; i++) {
-        elementsToRemove.push(arguments[i]);
+//     for (let i = 1; i < arguments.length; i++) {
+//         elementsToRemove.push(arguments[i]);
+//     }
+
+//     for (let j = 0; j < arguments[0].length; j++) {
+
+//         let match = false;
+
+//         for (let k = 0; k < elementsToRemove.length; k++) {
+//             if (arguments[0][j] == elementsToRemove[k]) {
+//                 match = true;
+//             }
+//         }
+
+//         if (match == false) {
+//             newArr.push(arguments[0][j]);
+//         }
+//     }
+
+//     return newArr;
+// }
+
+// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+function spinalCase(str) {
+
+    var repl = str.replace(/^\s+|\s+$|\s+(?=\s)/g, " ");
+    repl = repl.replace(/_/g, " ");
+
+    for (let i = 0; i < repl.length; i++) {
+        console.log(repl[i]);
     }
 
-    for (let i = 0; i < elementsToRemove.length; i++) {
-        for (let j = 0; j < arguments[0].length; j++) {
-            if (elementsToRemove[i] != arguments[0][j]) {
-                newArr.push(arguments[0][j]);
-            }
-        }
 
-    }
 
-    return newArr;
+    repl = repl.toLowerCase();
+    repl = repl.split(' ');
+    repl = repl.join('-');
+
+    return repl;
 }
 
-console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+console.log(spinalCase('This_Is Spinal Tap'));
