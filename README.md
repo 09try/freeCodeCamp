@@ -1,0 +1,2 @@
+### Certifications
+- Responsive Web Design
