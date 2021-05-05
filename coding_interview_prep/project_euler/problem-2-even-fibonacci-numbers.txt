@@ -1,0 +1,26 @@
+function fiboEvenSum(n) {
+
+    let sum = 0
+
+    let fib = 1;
+    let previousFib = 0;
+
+    for (let i = 1; i < n; i++) {
+
+        let currentFib = fib + previousFib;
+
+        console.log(currentFib);
+
+        if (currentFib <= n) {
+            if (currentFib % 2 == 0) {
+                sum += currentFib;
+            }
+        }
+
+        previousFib = fib;
+        fib = currentFib;
+    }
+
+    //console.log('sum ', sum);
+    return sum;
+}
