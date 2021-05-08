@@ -1,0 +1,39 @@
+function largestPalindromeProduct(n) {
+
+  let largestPalindrome = 0;
+  let largestNumber = Math.pow(10, n);
+  let currentResult = 0;
+
+  for(let i = 0; i < largestNumber; i++) {
+    for(let j = 0; j < largestNumber - i; j++) {
+      let first = largestNumber - i;
+      let second = largestNumber - j;
+      currentResult = first * second;
+
+      let currentResultString = currentResult.toString();
+      let isPalindrome = true;
+
+      for(let k = 0; k < currentResultString.length; k++) {
+        let firstChar = currentResultString[k];
+        let lastChar = currentResultString[currentResultString.length - 1 - k];
+
+        if(firstChar == lastChar) {
+          // same
+        } else {
+          isPalindrome = false;
+          break;
+        }
+      }
+
+      if(isPalindrome == true) {
+        if(currentResult > largestPalindrome) {
+          largestPalindrome = currentResult;
+        }
+      }
+    }
+  }
+
+  return largestPalindrome;
+}
+
+largestPalindromeProduct(3);
