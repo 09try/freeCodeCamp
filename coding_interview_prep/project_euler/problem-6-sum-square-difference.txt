@@ -1,0 +1,18 @@
+function sumSquareDifference(n) {
+
+  let sum = 0;
+  let sumOfSquares = 0;
+
+  for(let i = 1; i <= n; i++) {
+
+    sum += i;
+    sumOfSquares += i * i;
+
+  }
+
+  let difference = (sum * sum) - sumOfSquares;
+
+  return difference;
+}
+
+sumSquareDifference(100);

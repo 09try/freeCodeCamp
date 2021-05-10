@@ -1,0 +1,23 @@
+function pairwise(arr, arg) {
+
+  let sumOfIndices = 0;
+  let usedIndices = [];
+
+  for(let i = 0; i < arr.length; i++) {
+    if(usedIndices.includes(i) == false) {
+      for(let j = i + 1; j < arr.length; j++) {
+        if(usedIndices.includes(j) == false) {
+          if(arr[i] + arr[j] == arg) {
+            sumOfIndices = sumOfIndices + i + j;
+            usedIndices.push(j);
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  return sumOfIndices;
+}
+
+pairwise([1,4,2,3,0,5], 7);
