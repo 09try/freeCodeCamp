@@ -1,0 +1,14 @@
+// Only change code below this line
+function urlSlug(title) {
+  var output = title.toLowerCase();
+
+  output = output.split(' ');
+  output = output.filter(word => word != '');
+  output = output.join('-');
+
+
+  //console.log(output);
+  return output;
+
+}
+// Only change code above this line
