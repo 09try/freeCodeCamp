@@ -1,0 +1,20 @@
+function uniteUnique(arr) {
+  var args = Array.prototype.slice.call(arguments);
+  var dimensions = [args.length, args[0].length];
+
+  let output = [];
+
+  for(let i = 0; i < dimensions[0]; i++) {
+    if(args[i]) {
+      for(let j = 0; j < args[i].length; j++) {
+        if(output.includes(args[i][j]) == false) {
+          output.push(args[i][j]);
+        }
+      }
+    }
+  }
+
+  return output;
+}
+
+uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]);
