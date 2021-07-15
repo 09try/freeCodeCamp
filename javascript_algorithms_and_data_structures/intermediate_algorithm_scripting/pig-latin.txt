@@ -1,0 +1,20 @@
+function translatePigLatin(str) {
+
+  if(str.match(/^[aeiou]/)) {
+    str = str + 'way';
+  } else if (str.match(/[aeiou]/) == null) {
+    str = str + 'ay';
+  } else {
+
+    let tmp = str.match(/[aeiou]/);
+    let firstPart = str.slice(0, tmp.index);
+    let secondPart = str.slice(tmp.index, str.length);
+    let output = secondPart + firstPart + 'ay';
+
+    str = output;
+  }
+
+  return str;
+}
+
+translatePigLatin("consonant");
