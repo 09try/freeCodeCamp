@@ -1,0 +1,34 @@
+function myReplace(str, before, after) {
+
+  let r = /^[A-Z]/
+
+  if(before.match(r)) {
+
+    let t0 = after[0].toUpperCase();
+    let t1 = after.slice(1, after.length);
+
+    after = t0 + t1;
+
+    //console.log('upper case');
+  }
+
+  r = /^[a-z]/
+
+  if(before.match(r)) {
+
+    let t0 = after[0].toLowerCase();
+    let t1 = after.slice(1, after.length);
+
+    after = t0 + t1;
+
+    //console.log('upper case');
+  }
+
+  str = str.replace(before, after);
+
+  console.log(str);
+
+  return str;
+}
+
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
