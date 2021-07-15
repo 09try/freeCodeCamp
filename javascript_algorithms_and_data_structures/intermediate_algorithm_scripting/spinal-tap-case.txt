@@ -1,0 +1,14 @@
+function spinalCase(str) {
+
+  var tmp = str.split(/([A-Z]+|[A-Z]?[a-z]+)(?=[A-Z]|\b|[\s-_])/);
+
+  tmp = tmp.filter(letter => letter.replace(/[-_]/, ''));
+  tmp = tmp.filter(letter => letter !== '' && letter !== ' ');
+  tmp = tmp.map(word => word.toLowerCase()).join('-');
+
+  console.log(tmp);
+
+  return tmp;
+}
+
+spinalCase('This Is Spinal Tap');
