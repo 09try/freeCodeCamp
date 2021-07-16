@@ -1,0 +1,32 @@
+function palindrome(str) {
+
+  let myStr = str.replace(/[^a-z0-9]+/gi, "").toLowerCase();
+
+  let asciiCodesForward = [];
+  let asciiCodesBackward = [];
+
+  for(let i = 0; i < myStr.length; i++) {
+    asciiCodesForward.push(myStr.charCodeAt(i));
+  }
+
+  for(let i = myStr.length - 1; i >= 0; i--) {
+    asciiCodesBackward.push(myStr.charCodeAt(i));
+  }
+
+  let areEqual = true;
+  for(let i = 0; i < asciiCodesForward.length; i++) {
+    if(asciiCodesForward[i] != asciiCodesBackward[i]) {
+      areEqual = false;
+    }
+  }
+
+  //console.log(myStr);
+  //console.log(asciiCodesForward);
+  //console.log(asciiCodesBackward);
+
+  return areEqual;
+}
+
+
+
+palindrome("1 eye for of 1 eye.");
