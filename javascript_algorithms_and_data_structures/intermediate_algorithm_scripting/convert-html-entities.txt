@@ -1,0 +1,17 @@
+function convertHTML(str) {
+  let output = "";
+  let t = str.split(' ');
+
+  for(let i = 0; i < t.length; i++) {
+    t[i] = t[i].replace('&', "&amp;")
+    t[i] = t[i].replace('"', "&quot;")
+    t[i] = t[i].replace("'", "&apos;")
+    t[i] = t[i].replace("<", "&lt;");
+    t[i] = t[i].replace(">", "&gt;");
+  }
+
+  output = t.join(' ');
+  return output;
+}
+
+convertHTML('Stuff in "quotation marks"');
