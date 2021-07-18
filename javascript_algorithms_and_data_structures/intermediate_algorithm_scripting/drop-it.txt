@@ -1,0 +1,20 @@
+function dropElements(arr, func) {
+
+  let output = [];
+
+  for(let i = 0; i < arr.length; i++) {
+
+    let o = func(arr[i]);
+
+    if(o == true) {
+      output = arr.slice(i, arr.length);
+
+      console.log(output);
+      return output;
+    } 
+  }
+
+  return output;
+}
+
+dropElements([1, 2, 3, 4], function(n) {return n >= 3;})
