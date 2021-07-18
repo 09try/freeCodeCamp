@@ -1,0 +1,28 @@
+function rot13(str) {
+  let lowerAscii = 65;
+  let upperAscii = 90;
+  let rot13 = 13;
+  let decodedString = "";
+
+  for(let i = 0; i < str.length; i++) {
+    let currentAscii = str.charCodeAt(i);
+    let newAscii = -1;
+
+    if(currentAscii >= lowerAscii && currentAscii <= upperAscii) {
+      if(upperAscii < currentAscii + rot13) {
+        let t = upperAscii - currentAscii;
+        newAscii = lowerAscii + rot13 - t - 1;
+      } else {
+        newAscii = currentAscii + rot13;
+      }
+
+      decodedString += String.fromCharCode(newAscii);
+    } else {
+      decodedString += String.fromCharCode(currentAscii);
+    }
+  }
+
+  return decodedString;
+}
+
+rot13("SERR PBQR PNZC");
