@@ -1,0 +1,14 @@
+function truthCheck(collection, pre) {
+
+  let isTruthy = 0;
+
+  for(let i = 0; i < collection.length; i++) {
+    if(collection[i][pre]) {
+      isTruthy += 1;
+    }
+  }
+
+  return collection.length == isTruthy ? true : false;
+}
+
+truthCheck([{"single": "double"}, {"single": undefined}], "single")
