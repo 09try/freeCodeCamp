@@ -1,0 +1,25 @@
+function whatIsInAName(collection, source) {
+  let arr = [];
+  // Only change code below this line
+  for(let i = 0; i < collection.length; i++) {
+    let numberOfMatches = Object.entries(source).length;
+    let currentNumberOfMatches = 0;
+    for (const [_key, _value] of Object.entries(collection[i])) {
+        for (const [key, value] of Object.entries(source)) {
+          if(_key == key && _value == value) {
+            currentNumberOfMatches += 1;
+          }
+        }
+    }
+
+    if(numberOfMatches == currentNumberOfMatches) {      
+      arr.push(collection[i]);
+    }
+  }
+
+  // Only change code above this line
+  //console.log(arr);
+  return arr;
+}
+
+whatIsInAName([{"a": 1, "b": 2, "c": 3}], {"a": 1, "b": 9999, "c": 3})
