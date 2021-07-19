@@ -1,0 +1,31 @@
+function addTogether(a, b = 0) {
+  if(arguments.length === 1) {
+    if(typeof arguments[0] == "string") {
+      return undefined;
+    } else {
+      return function(b2) {
+        if(b2.length) {
+          return undefined;
+        } else {
+          return a + b2;
+        }
+      }
+    }
+  } else {
+    
+    if(typeof a == "string" || typeof b == "string") {
+      return undefined;
+    }
+
+    let _a = parseInt(a);
+    let _b = parseInt(b);
+
+    if(_a && _b) {
+      return _a + _b;
+    } else {
+      return undefined;
+    }
+  }
+}
+
+addTogether(5)([3]);
